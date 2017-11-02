@@ -1,0 +1,85 @@
+#editor {
+  width: 600px;
+  margin: 2em auto;
+  padding: 10px;
+  background: #eee;
+  overflow: hidden;
+  font-family: sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Standard */
+}
+
+#editor .row {
+  padding: 10px;
+  display: flex;
+  height: 50px;
+}
+
+#editor .component, #editor .splitter, #editor .placeholder {
+  box-sizing: border-box;
+  height: 50px;
+  flex: 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#editor .component {
+  background: #ddd;
+  border: #ccc 3px solid;
+  cursor: grab;
+  transition: background-color .2s ease-out, flex-grow .2s ease-out;
+}
+
+#editor .component:hover {
+  background: #e0e0e0;
+}
+
+#editor .component:active,
+#editor .component:focus {
+  background: #d5d5d5;
+  transition: background-color .1s ease-out;
+}
+
+#editor .splitter {
+  flex: 0 0 20px;
+  cursor: col-resize;
+}
+
+#editor .placeholder {
+  background: #ddd;
+  opacity: .5;
+  border: #ccc 3px dashed;
+}
+
+#editor .label {
+  color: #bbb;
+  flex-shrink: 1;
+}
+
+#editor .fraction {
+  /*display: none;*/
+  font-size: .7em;
+  background: #ccc;
+  color: #eee;
+  padding: 3px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+#editor.resizing .fraction {
+  display: block;
+}
+
+#debug {
+  width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #eee;
+  font-family: monospace;
+  font-size: 12pt;
+}
